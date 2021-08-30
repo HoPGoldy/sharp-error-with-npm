@@ -10,34 +10,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
 
-    - name: Install
-      run: |
-        npm install -g yarn
-        yarn
+      - name: Install
+        run: |
+          npm install -g yarn
+          yarn
 
-    - name: show envinfo
-      run: npx envinfo --binaries --system
+      - name: show envinfo
+        run: npx envinfo --binaries --system
 
-    - name: run
-      run: yarn run case
+      - name: run
+        run: yarn run case
 
   run-with-npm:
     runs-on: ubuntu-latest
 
     steps:
-      steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
 
-    - name: Install
-      run: npm install
+      - name: Install
+        run: npm install
 
-    - name: show envinfo
-      run: npx envinfo --binaries --system
+      - name: show envinfo
+        run: npx envinfo --binaries --system
 
-    - name: run
-      run: npm run case
+      - name: run
+        run: npm run case
