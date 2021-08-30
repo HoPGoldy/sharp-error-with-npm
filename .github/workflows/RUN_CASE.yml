@@ -1,0 +1,43 @@
+name: DRAW_OFFICAL
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  run-with-yarn:
+    runs-on: ubuntu-latest
+
+    steps:
+      steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install
+      run: |
+        npm install -g yarn
+        yarn
+
+    - name: show envinfo
+      run: npx envinfo --binaries --system
+
+    - name: run
+      run: yarn run case
+
+  run-with-npm:
+    runs-on: ubuntu-latest
+
+    steps:
+      steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2
+
+    - name: Install
+      run: npm install
+
+    - name: show envinfo
+      run: npx envinfo --binaries --system
+
+    - name: run
+      run: npm run case

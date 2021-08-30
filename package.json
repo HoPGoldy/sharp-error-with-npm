@@ -1,0 +1,14 @@
+{
+  "name": "sharp-error-with-npm",
+  "scripts": {
+    "case": "node test.js"
+  },
+  "dependencies": {
+    "sharp": "^0.28.3"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:HoPGoldy/sharp-error-with-npm.git",
+  "author": "hopgoldy <hpgless@outlook.com>",
+  "license": "MIT"
+}
